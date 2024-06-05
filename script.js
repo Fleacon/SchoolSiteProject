@@ -1,14 +1,16 @@
-var dropdown = document.getElementsByClassName("dropdownbutton");
-var i;
+const sidebar = document.getElementById("Sidebar");
+const sidebarButtonIcon = document.getElementById("ButtonIcon");
+const overlay = document.getElementById("Overlay");
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var dropdownContent = document.getElementsByClassName("dropdownitems");
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
+function openSidebar() {
+  sidebar.classList.toggle("show");
+  sidebarButtonIcon.classList.toggle("fa-rotate-90");
+  overlay.classList.toggle("visible");
+}
+
+//should usually be called when clicked on the overlay
+function closeSidebar() {
+  sidebar.classList.remove("show");
+  sidebarButtonIcon.classList.remove("fa-rotate-90");
+  overlay.classList.remove("visible");
 }

@@ -1,14 +1,24 @@
 :root {
-  --header-color: hsl(262, 80%, 15%);
-  --body-color: hsl(198, 83%, 91%);
+  --primary-color-white: hsl(0, 0%, 100%);
+  --primary-color-black: hsl(40, 7%, 9%);
+  --secondary-color-fire-bush: hsl(36, 85%, 54%);
+  --secondary-color-dark-indigo: hsl(262, 79%, 15%);
+  --accent-color-sky-magenta: hsl(299, 45%, 61%);
+
+  --header-color: var(--secondary-color-dark-indigo);
+
   --navbar-color: hsl(36, 85%, 54%);
   --navbar-item-hover-color: hsl(36, 85%, 45%);
   --navbar-item-active-color: hsl(36, 85%, 60%);
   --navbar-item-font-color: var(--header-color);
   --navbar-divider-color: hsl(36, 85%, 70%);
-  --navbar-size: 200px;
-  --content-size: 300px;
-  --header-size: calc(var(--navbar-size) + var(--content-size));
+  --navbar-width: 400px;
+
+  --header-width: calc(var(--navbar-width) + var(--content-size));
+  --header-height: 75px;
+  --header-menu-transition-speed: 0.3s;
+
+  --body-color: var(--primary-color-white);
 }
 
 /*General settings*/
@@ -49,30 +59,49 @@ input[type="reset"] {
 
 /*Header*/
 
+header {
+  height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-color);
+  min-width: var(--header-width);
+}
+
+.menubutton {
+  position: absolute;
+  /*color: var(--primary-color-white); */
+  color: var(--accent-color-sky-magenta);
+  left: 0;
+  margin-left: 35px;
+  font-size: 2em;
+}
+
+#ButtonIcon {
+  transition: var(--header-menu-transition-speed);
+}
+
 h1 {
   color: white;
   font-size: 2em;
   font-weight: 700;
 }
 
-header {
-  height: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--header-color);
-  min-width: var(--header-size);
-}
-
 /*Sidebar*/
 
 .sidebar {
-  position: absolute;
-  left: 0;
-  width: var(--navbar-size);
+  position: fixed;
+  left: calc(-1 * var(--navbar-width));
+  width: var(--navbar-width);
   background-color: var(--navbar-color);
   min-height: 100%;
   overflow-x: hidden;
+  transition: var(--header-menu-transition-speed);
+  z-index: 100000;
+}
+
+.show {
+  left: 0;
 }
 
 ul {
@@ -162,8 +191,27 @@ i {
 /*Main Content*/
 
 .mainpage {
-  margin-left: 200px;
   min-width: 300px;
+}
+
+/*when the sidebar is visible the overlay gets displayed*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  margin-top: var(--header-height);
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .currentTitle {
@@ -174,17 +222,17 @@ i {
 }
 
 .imagetheme {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 30px;
 }
 
 #ImageTheme {
-  max-width: 100%;
+  width: 100%;
 }
 
 .bildquelle {
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .content {

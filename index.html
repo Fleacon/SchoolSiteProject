@@ -11,7 +11,10 @@
     <title>Document</title>
   </head>
   <body>
-    <header><h1>Propaganda in Diktaturen</h1></header>
+    <header>
+      <button id="Menubtn" class="menubutton" onclick="openSidebar()"><i id="ButtonIcon" class="fa-solid fa-bars"></i></button>
+      <h1>Propaganda in Diktaturen</h1>
+    </header>
     <main>
       <nav class="sidebar" id="Sidebar">
         <ul class="mainlist">
@@ -44,6 +47,7 @@
           <li><a href="" class="navitem">Fazit</a></li>
         </ul>
       </nav>
+      <div id="Overlay" class="overlay" onclick="closeSidebar()"></div>
       <div class="mainpage">
         <div class="currentTitle"><h2>Home</h2></div>
         <div class="imagetheme">
@@ -54,5 +58,7 @@
       </div>
     </main>
     <footer></footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
