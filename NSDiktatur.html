@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/05789cd11b.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>NSDiktatur</title>
   </head>
   <body>
     <header>
@@ -18,7 +18,7 @@
     <main>
       <nav class="sidebar" id="Sidebar">
         <h2>Menü</h2>
-        <ul class="mainlist">
+        <ul class="sidebarlist mainlist">
           <li><a href="index.html" class="navitem">Home</a></li>
           <li>
             <div class="dropdown navitem">
@@ -26,7 +26,7 @@
                 <i class="fa fa-caret-right" id="DropdownButtonIcon"></i>
                 Medien in Diktaturen
               </button>
-              <ul class="dropdownmenu" id="DropdownMenu">
+              <ul class="sidebarlist dropdownmenu" id="DropdownMenu">
                 <li><a href="Diktatur.html" class="navitem">Diktatur</a></li>
                 <li><a href="NSDiktatur.html" class="navitem active">NS-Diktatur</a></li>
                 <li><a href="DieMethode.html" class="navitem">"Die Methode"</a></li>
@@ -38,6 +38,8 @@
           </li>
           <li><a href="Auswirkung.html" class="navitem">Auswirkung auf das Individum</a></li>
           <li><a href="Fazit.html" class="navitem">Fazit</a></li>
+          <li><a href="Impressum.html" class="navitem">Impressum</a></li>
+          <li class="navitem"><a href="https://docs.google.com/document/d/e/2PACX-1vS34rpuJCwZRBeRIRtKLy94dV0bI9OdwrRIDHYHlTqBON8gznzoD7CZ6ylwXD8EDm61Zy6tcpKuYzIp/pub">Quellen</a></li>
         </ul>
       </nav>
       <div id="Overlay" class="overlay" onclick="closeSidebar()"></div>
@@ -50,32 +52,38 @@
         <div class="content">
           <h3>Entstehung</h3>
           <p>
-            Die Wahlen von 1933 markierten einen Wendepunkt in der deutschen Geschichte, als die NSDAP die Macht übernahm. Dies war auch die letzte
-            Wahl mit mehreren Parteien bis 1946. Adolf Hitler wurde zum Reichskanzler ernannt, was bedeutende Veränderungen für Deutschland mit sich
-            brachte. Die Gewaltenteilung wurde aufgehoben, insbesondere durch das Ermächtigungsgesetz, das Hitler nahezu uneingeschränkte Macht
-            verlieh. In den folgenden Jahren bereitete Hitler Deutschland auf den Krieg vor, indem er frühere Verbote ignorierte und den Versailler
-            Vertrag umging. Obwohl einige Länder, insbesondere die Nachbarländer, die aufrüstenden Aktivitäten Deutschlands bemerkten, gab es wenig
-            Widerstand. Die Olympischen Spiele von 1936 in Berlin halfen, internationale Bedenken zu besänftigen, doch Frankreich und Großbritannien
-            versuchten vergeblich, Hitlers aggressive Politik zu stoppen. Erst nach der Besetzung der Rest-Tschechei wurde deutlich, dass ihre
-            Bemühungen gescheitert waren.
+            Die Wahlen von <b>1933</b> markierten einen Wendepunkt in der deutschen Geschichte, als die NSDAP die Macht übernahm. Dies war auch die <b>letzte Wahl mit mehreren Parteien bis</b>
+            <b>1946</b>. <b>Adolf Hitler</b> wurde zum <b>Reichskanzler</b> ernannt, was bedeutende Veränderungen für Deutschland mit sich brachte. Die <b>Gewaltenteilung</b> wurde <b>aufgehoben</b>,
+            insbesondere durch das <b>Ermächtigungsgesetz</b>, das Hitler nahezu <b>uneingeschränkte Macht</b> verlieh. In den folgenden Jahren bereitete Hitler Deutschland auf den Krieg vor, indem er
+            frühere Verbote ignorierte und den Versailler Vertrag umging. Obwohl einige Länder, insbesondere die Nachbarländer, die aufrüstenden Aktivitäten Deutschlands bemerkten, gab es wenig
+            Widerstand. Die Olympischen Spiele von 1936 in Berlin halfen, internationale Bedenken zu besänftigen, doch Frankreich und Großbritannien versuchten vergeblich, Hitlers aggressive Politik
+            zu stoppen. Erst nach der Besetzung der Rest-Tschechei wurde deutlich, dass ihre Bemühungen gescheitert waren.
           </p>
+          <hr />
           <h3>Merkmale</h3>
-          <p>
-            Die NS-Zeit war zweifellos eine Diktatur, wie anhand mehrerer Beispiele belegt werden kann. Nach der Machtübernahme Hitlers wurde die
-            Gewaltenteilung schnell aufgelöst, wodurch er die gesamte Macht im Land innehatte. Ein weiteres Beispiel ist, dass die NSDAP ihr Land von
-            Anfang an als "Großdeutsches Reich" oder "Drittes Reich" bezeichnete, während es außerhalb und nach dem Krieg eindeutig als NS-Diktatur
-            betrachtet wurde. Die Wahlen von 1933 waren die letzten mit mehr als einer Partei auf dem Wahlzettel, was bedeutete, dass die NSDAP unter
-            Adolf Hitler als "Führer" die alleinige regierende Partei war.
-          </p>
+          <p>Die NS-Zeit war zweifellos eine Diktatur, wie anhand mehrerer Beispiele belegt werden kann.</p>
+          <div class="merkmaleliste">
+            <div class="merkmal">Nach der Machtübernahme Hitlers wurde die Gewaltenteilung schnell aufgelöst, wodurch er die gesamte Macht im Land innehatte</div>
+            <div class="merkmal">
+              Die NSDAP hat ihr Land von Anfang an als "Großdeutsches Reich" oder "Drittes Reich" bezeichnet, während es außerhalb und nach dem Krieg eindeutig als NS-Diktatur bezeichnet wurde
+            </div>
+            <div class="merkmal">
+              Die Wahlen von 1933 waren die letzten mit mehr als einer Partei auf dem Wahlzettel, was bedeutete, dass die NSDAP unter Adolf Hitler als "Führer" die alleinige regierende Partei war
+            </div>
+          </div>
+          <hr />
           <h3>Propaganda</h3>
           <p>
-            Propaganda war während der NS-Diktatur ein mächtiges Instrument, um die Bevölkerung zu beeinflussen und die Herrschaft der
-            Nationalsozialisten zu festigen. Durch gezielte Manipulation von Informationen und die Einschränkung der Meinungsfreiheit wurden die
-            Ideale der NSDAP verbreitet und Feindbilder wie "der Jude" geschaffen, um die Gesellschaft zu vereinen und zu kontrollieren. Reden und
-            Kundgebungen, besonders von charismatischen Rednern wie Hitler und Goebbels, spielten eine zentrale Rolle in der Propaganda. Zudem wurde
-            das Radio als Massenmedium genutzt, um die Botschaften der Nationalsozialisten weit zu verbreiten. Filme und Fernsehen wurden ebenfalls
-            als Propagandainstrumente eingesetzt, wobei das Radio jedoch das wichtigste Medium war. Diese Propaganda trug dazu bei, das Volk effektiv
-            zu beeinflussen und ermöglichte die Verfolgung und Diskriminierung der jüdischen Bevölkerung. Sie spielte eine entscheidende Rolle sowohl
+            Propaganda war während der NS-Diktatur ein mächtiges Instrument, um die Bevölkerung zu beeinflussen und die Herrschaft der Nationalsozialisten zu festigen. Durch gezielte Manipulation von
+            Informationen und die Einschränkung der Meinungsfreiheit wurden die Ideale der NSDAP verbreitet und Feindbilder wie "der Jude" geschaffen, um die Gesellschaft zu vereinen und zu
+            kontrollieren.
+            <br />
+            <img src="./assets/hitlerrede.jpg" alt="" />
+            <p class="bildquelle">Quelle: leibniz-gemeinschaft.de</p>
+            <br />
+            Reden und Kundgebungen, besonders von charismatischen Rednern wie Hitler und Goebbels, spielten eine zentrale Rolle in der Propaganda. Zudem wurde das Radio als Massenmedium genutzt, um
+            die Botschaften der Nationalsozialisten weit zu verbreiten. Filme und Fernsehen wurden ebenfalls als Propagandainstrumente eingesetzt, wobei das Radio jedoch das wichtigste Medium war.
+            Diese Propaganda trug dazu bei, das Volk effektiv zu beeinflussen und ermöglichte die Verfolgung und Diskriminierung der jüdischen Bevölkerung. Sie spielte eine entscheidende Rolle sowohl
             bei der Machtergreifung als auch bei der Aufrechterhaltung der nationalsozialistischen Herrschaft während des Zweiten Weltkriegs.
           </p>
         </div>
