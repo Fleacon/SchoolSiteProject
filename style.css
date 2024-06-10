@@ -292,8 +292,8 @@ h4 {
 }
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: var(--accent-color-sky-magenta);
+  color: var(--primary-color-white);
 }
 /* Style the back side */
 .flip-card-back {
@@ -304,4 +304,9 @@ h4 {
 .flip-card img {
   width: 250px;
   height: 250px;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
